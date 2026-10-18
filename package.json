@@ -1,0 +1,20 @@
+{
+  "name": "oddly-clear-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Small experiments. Big questions. Interactive science companions for Oddly Clear.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "check:dist": "node scripts/check-dist.mjs",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": {"node": ">=24"},
+  "dependencies": {
+    "d3-geo": "3.1.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {"esbuild": "0.28.1"}
+}

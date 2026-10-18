@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const html=await fs.readFile(path.join(root,'dist/water/index.html'),'utf8');
+assert.match(html,/<html lang="en">/);
+assert.match(html,/Oddly Clear/);
+assert.match(html,/\.\.\/assets\/water-full-55s\.mp4/);
+assert.ok(!html.includes('__VIDEO_URL__')&&!html.includes('__POSTER_URL__'));
+assert.ok(!/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(html));
+assert.ok(!/[А-Яа-яЁё]/.test(html),'Public interface must remain English-only');
+const hash=async p=>createHash('sha256').update(await fs.readFile(path.join(root,p))).digest('hex');
+assert.equal(await hash('dist/assets/water-full-55s.mp4'),'a8b99071108a4bf782ec5c99d41b5655d07a0dbf655c3f7a7ffa5bd856e7450b');
+assert.match(await fs.readFile(path.join(root,'dist/index.html'),'utf8'),/url=\.\/water\//);
+console.log('Static output checked: English, relative URLs, embedded runtime, approved video hash.');

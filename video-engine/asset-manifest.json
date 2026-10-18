@@ -1,0 +1,33 @@
+[
+  {
+    "file": "public\\fonts\\bricolage-700.ttf",
+    "url": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvfzlyM0.ttf",
+    "sha256": "913ee3631949ee1b4fb2601269412fca5775eb994d4f87be2c366c94ac123dc5",
+    "license": "OFL-1.1"
+  },
+  {
+    "file": "public\\fonts\\bricolage-800.ttf",
+    "url": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvZvlyM0.ttf",
+    "sha256": "50fe1039eb3ff208d027a4867d3f53bd288bba76273a718578f7b3ec0feec388",
+    "license": "OFL-1.1"
+  },
+  {
+    "file": "public\\fonts\\dmsans-400.ttf",
+    "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhTg.ttf",
+    "sha256": "b0ae3e89a7d3ef2b1838bb4b1ceb0b17cc3435af061eee809d76aa623ff116e9",
+    "license": "OFL-1.1"
+  },
+  {
+    "file": "public\\fonts\\dmsans-600.ttf",
+    "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAfJthTg.ttf",
+    "sha256": "b79a2ea7a38f33fd96a282fadb9ce97626bb0724a44d21075859f0e50239993a",
+    "license": "OFL-1.1"
+  },
+  {
+    "file": "src/data/land.json",
+    "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson",
+    "source_sha256": "9e0729ee253ca7d7a5c4ae9395fb1902264c5377c52e224d13dd85010e2835d9",
+    "license": "public domain",
+    "terms": "https://www.naturalearthdata.com/about/terms-of-use/"
+  }
+]
