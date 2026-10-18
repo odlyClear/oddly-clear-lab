@@ -6,12 +6,12 @@ Read [README.md](README.md), [the production method](docs/production-method.md) 
 
 This is the public **interactive website** repository. It contains editable Water Lab source, selected shared SVG components, licensed fonts, map geometry and the approved 55-second film. The `video-engine/` directory here is an illustration subset, not the full Remotion engine. Raw voice takes, private claim-review records, the full video render/audio/QA tools and the fourteen week-one cards are in the owner's separate production workspace. Do not claim those materials exist in this checkout.
 
-The current public route is `/oddly-clear-lab/water/`. One full film and one interactive page exist. Thirteen remaining week-one films and later-week topic slates are not completed. No YouTube upload or schedule is recorded by this repository.
+The public homepage is `/oddly-clear-lab/`, with selected public-release cards in `web/home/episodes.mjs`. Water Lab remains `/oddly-clear-lab/water/` with its original film. Roadster links to its external YouTube Short; it has no interactive lab here. The full production inventory and API release evidence remain in the separate private workspace. The static directory is not a live YouTube status/analytics source.
 
 ## Website changes
 
-1. Edit `web/water/` for Water Lab; shared illustration source is under `video-engine/src/`. Do not hand-edit generated `dist/`.
-2. `scripts/build.mjs` currently builds only Water Lab. New experiments require an explicit new source entry/route, media mapping, build output and checks. Keep `/water/` working. One repository serves all episode pages.
+1. Edit `web/home/` for the directory and `web/water/` for Water Lab; shared illustration source is under `video-engine/src/`. Do not hand-edit generated `dist/`. Homepage artwork is original SVG, with the existing licensed/public-domain land geometry.
+2. `scripts/build.mjs` builds the homepage and Water Lab. New experiments require an explicit new source entry/route, media mapping, build output and checks. Adding a directory card alone does not create an experiment. Keep `/water/` working. One repository serves all episode pages.
 3. `scripts/check-dist.mjs` verifies the existing water output and approved film SHA-256. Keep that regression check; add new page checks rather than replacing the expected film hash with unrelated media.
 4. Preserve relative URLs under the repository prefix. Keep runtime code/fonts local and embedded as appropriate. Load media on demand. Do not add keys, private documents, raw research or machine-specific paths.
 5. Maintain touch and keyboard operation, model assumptions, reduced motion, pause/reset, URL settings and usable phone layouts. Model coefficients are illustrative, not engineering measurements. For simulations, verify the relevant conservation/boundary invariants.

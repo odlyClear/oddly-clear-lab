@@ -32,3 +32,4 @@ main{max-width:1280px;margin:auto;padding:0 36px}.intro{display:flex;align-items
 @media(max-width:700px){.header-note{font-size:7px;max-width:122px;letter-spacing:.04em}}
 @media(max-width:360px){.header-note{max-width:104px;font-size:6px}.speed-group button{min-width:33px}.play-button{padding:0 8px;font-size:9px;gap:5px}.reset-button{width:36px}.stock-number strong{font-size:37px}.world-top{top:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rain-streak{opacity:.6}.cloud-bob{translate:none}}
+.all-episodes{display:flex;align-items:center;gap:7px;min-height:44px;font-size:12px;text-decoration:none;border-bottom:1px solid var(--line)}.all-episodes:hover{color:var(--ocean)}

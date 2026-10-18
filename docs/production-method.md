@@ -6,7 +6,7 @@ This guide explains how Oddly Clear creates episodes across weeks. This public r
 
 The first full film is **Why Can a Water Planet Run Dry?**, 55 seconds, 1080×1920, 30 fps, ten scenes and 100 English narration words. The owner approved its original illustration direction. English Puck is the current voice direction. Preserve teal/cream/mint/coral, dimensional SVG illustration, purposeful transitions, large typography and legible captions. New topics need their own explanatory pictures, not relabeled water scenes.
 
-Week one has fourteen briefs in the full workspace, one full film and thirteen films still to produce. Water Lab is deployed; this is independent of YouTube publication. No YouTube uploads or launch dates are recorded here.
+Week one has fourteen briefs in the full workspace; consult that workspace for current production/release counts. Water Lab and the public episode directory are deployed independently of YouTube publication. The directory contains selected authorized release links, not private production/analytics records.
 
 ## Repeat for every episode
 
@@ -39,7 +39,7 @@ npm run check:dist
 npm run preview
 ```
 
-They build/check the interactive website, **not new videos**. `scripts/build.mjs` currently builds Water Lab only. Generalized multi-episode rendering/build adapters and YouTube scheduling are separate future work.
+They build/check the interactive website, **not new videos**. `scripts/build.mjs` builds the episode directory and Water Lab. Other experiments need explicit routes/adapters. No YouTube upload credentials or scheduling backend belong in this public repository.
 
 ## New-agent handoff
 

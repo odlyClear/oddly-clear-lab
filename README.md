@@ -4,6 +4,14 @@
 
 Interactive science companions for the Oddly Clear channel. One repository, one page per episode. All content is English.
 
+## Episode directory
+
+**Start here: https://odlyclear.github.io/oddly-clear-lab/**
+
+A light, English homepage with original SVG illustrations and large phone-friendly actions. Water opens the existing interactive lab; Roadster links to its YouTube Short. The homepage loads no video or React runtime. Its HTML is approximately 57 KB before compression, plus three locally hosted cached font files (approximately 179 KB total). Water Lab includes an All episodes return link and keeps its existing route and approved film.
+
+Edit `web/home/episodes.mjs` to add an authorized public release. Each item specifies its display number, title/description, action, optional video link and artwork key. Add original topic artwork in `web/home/render.mjs` when needed. Do not export private Factory data, unpublished scripts or a whole production slate into this public directory. A video link is not an interactive page: add new lab routes/build mappings separately. Roadster's `publishAt` describes its scheduled release; the homepage's time label does not query or independently verify YouTube visibility.
+
 ## Start here, agents
 
 Read [AGENTS.md](AGENTS.md), [the episode production method](docs/production-method.md) and [rolling weekly planning](docs/weekly-planning.md). Reusable [episode briefs](templates/episode-brief.md), [weekly plans](templates/weekly-plan.md) and [delivery reports](templates/delivery-report.md) keep handoffs independent of chat history. This public checkout is the website and selected artwork/media, not the complete private video engine. Future agents must distinguish a documented process from films or generic render tools that have not yet been implemented.
@@ -28,11 +36,12 @@ npm run check:dist
 npm run preview
 ```
 
-Open the Local URL printed by the preview server, normally http://127.0.0.1:4178/water/.
+Open the Local URL printed by the preview server, normally http://127.0.0.1:4178/; Water Lab remains at `/water/`.
 
 ## Edit and publish
 
-- Interface, styles and model: `web/water/`.
+- Homepage directory, original artwork and styles: `web/home/`.
+- Water interface, styles and model: `web/water/`.
 - Shared original SVG components: `video-engine/src/visual-kit/`.
 - Fonts and license notices: `video-engine/public/fonts/`.
 - Episode video and poster: `media/`.

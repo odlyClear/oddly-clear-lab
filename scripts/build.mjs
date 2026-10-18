@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
+import {renderHome} from '../web/home/render.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=path.join(root,'web/water');
@@ -26,7 +27,10 @@ ${licenses.replaceAll('--','—')}
 -->
 `;
 await fs.writeFile(path.join(dist,'water/index.html'),html);
-await fs.writeFile(path.join(dist,'index.html'),'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=./water/"><title>Oddly Clear · Lab</title><a href="./water/">Open the Water Lab</a></html>\n');
+const home=await renderHome();
+await fs.writeFile(path.join(dist,'index.html'),home);
+for(const file of ['bricolage-800.ttf','dmsans-400.ttf','dmsans-600.ttf','bricolage-OFL.txt','dmsans-OFL.txt'])await fs.copyFile(path.join(fonts,file),path.join(dist,'assets',file));
 await fs.writeFile(path.join(dist,'.nojekyll'),'');
 await fs.copyFile(path.join(root,'media/water-full-55s.mp4'),path.join(dist,'assets/water-full-55s.mp4'));
 console.log(`Built Oddly Clear Water Lab: ${Buffer.byteLength(html).toLocaleString('en-US')} bytes HTML, no external runtime dependencies.`);
+console.log(`Built episode directory: ${Buffer.byteLength(home).toLocaleString('en-US')} bytes HTML, ${home.match(/class="story story-/g)?.length||0} stories, no framework runtime.`);

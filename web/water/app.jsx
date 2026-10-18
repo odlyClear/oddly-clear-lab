@@ -85,8 +85,8 @@ function App(){
     <div className="range-ends"><span>{left}</span><span>{right}</span></div>
   </div>;
   return <>
-    <header className="masthead"><a className="brand" href="#top" aria-label="Oddly Clear"><span className="brand-mark"><Icon name="drop" size={17}/></span>{c.lab}<span className="brand-lab"> / LAB</span></a>
-      <span className="header-note">SMALL EXPERIMENTS. BIG QUESTIONS.</span>
+    <header className="masthead"><a className="brand" href="../" aria-label="Oddly Clear home"><span className="brand-mark"><Icon name="drop" size={17}/></span>{c.lab}<span className="brand-lab"> / LAB</span></a>
+      <a className="all-episodes" href="../">All episodes <Icon name="arrow" size={16}/></a>
     </header>
     <main id="top">
       <section className="intro"><div><p className="eyebrow">{c.edition}</p><h1>{c.titleA}<br/><span>{c.titleB}</span></h1><p className="intro-copy">{c.intro}</p></div><button className="watch-link" onClick={openFilm}><span className="watch-icon"><Icon name="play" size={14}/></span>{c.watch}<Icon name="arrow" size={16}/></button></section>
