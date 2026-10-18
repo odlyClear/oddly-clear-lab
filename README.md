@@ -4,6 +4,10 @@
 
 Interactive science companions for the Oddly Clear channel. One repository, one page per episode. All content is English.
 
+## Start here, agents
+
+Read [AGENTS.md](AGENTS.md), [the episode production method](docs/production-method.md) and [rolling weekly planning](docs/weekly-planning.md). Reusable [episode briefs](templates/episode-brief.md), [weekly plans](templates/weekly-plan.md) and [delivery reports](templates/delivery-report.md) keep handoffs independent of chat history. This public checkout is the website and selected artwork/media, not the complete private video engine. Future agents must distinguish a documented process from films or generic render tools that have not yet been implemented.
+
 ## First experiment: Water Lab
 
 Keep a tiny city's water flowing for 30 model days. Change rainfall and demand, try conservation or desalination, tap the cloud, and watch the existing 55-second film. The page supports phone layouts, touch sliders, keyboard controls, reduced motion, pause/reset and shareable settings.
